@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gül Nihal Gür | Portfolio</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #ffffff, #181e84);
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #0c0240;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #f4f4f4;
+    }
+
+    /* 🔁 SLIDER ALANI */
+    .slider {
+    position: relative;
+    max-width: 100%;
+    height: 100px; /* 🔹 Fotoğrafların yüksekliğini azalttık */
+    overflow: hidden;
+    border-bottom: 5px solid #fff;
+    border-radius: 0 0 25px 25px; /* 🔹 Alt kısmı yumuşak bir kavisle bitirir */
+    }
+    .slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 🔹 Oranı koruyarak kırpma */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    filter: brightness(0.95); /* 🔹 Hafif karartma, üst yazı daha okunaklı görünür */
+    }
+
+    .slider img.active {
+      opacity: 1;
+    }
+
+    nav {
+      text-align: center;
+      margin: 30px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #030242;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255,255,255,0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    /* 📦 PROJE KARTLARI */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      background: #fff;
+      padding: 0;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #181e84;
+    }
+    .card p {
+      color: #555;
+      min-height: 60px;
+    }
+    .tag {
+      display: inline-block;
+      background: #fbc2eb;
+      color: #333;
+      padding: 5px 10px;
+      border-radius: 10px;
+      font-size: 0.8em;
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+
+    /* 🌐 PROJE LİNK BUTONU */
+    .project-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 20px;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .project-link:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+
+    /* ✉️ İLETİŞİM */
+    .contact {
+      text-align: center;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .contact a:hover {
+      opacity: 0.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #f0f0f0;
+      background: #181e84;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔁 ÜST FOTOĞRAF SLIDER -->
+  <div class="slider">
+    <img src="/Users/gulnihalgur/Desktop/web/1.jpg" alt="Teknofest Sahnesi" class="active" />
+    <img src="/Users/gulnihalgur/Desktop/web/2.jpg" alt="Takım Çalışması" />
+    <img src="/Users/gulnihalgur/Desktop/web/F43973F1-59B9-42EB-9C2F-0A9C996D3DF0_1_105_c.jpeg" alt="Projeden Kare" />
+  </div>
+
+  <header>
+    <h1>Gül Nihal Gür</h1>
+    <p>Software Engineer | AI Developer | Teknofest Finalist</p>
+  </header>
+
+  <nav>
+    <a href="#about">Hakkımda</a>
+    <a href="#projects">Projeler</a>
+    <a href="#contact">İletişim</a>
+  </nav>
+
+  <section id="about">
+    <h2>👋 Hakkımda</h2>
+    <p>
+      İstanbul Aydın Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisiyim. Mesleğine tutkun, çalıştıkça çalışan, durdukça yorulan bir Türk genciyim.
+      Hobilerim arasında binicilik, yüzücülük gibi spor dallarının yanında bilmediğim şeyleri merak etme ve öğrenme süreci gibi bağımlılıklarım var.
+      Yapay zeka ve veri bilimi özel ilgi alanım. Özellikle ilgi alanlarımı farklı bilim dallarıyla birleştirmekten çok keyif alıyorum. Bu keyif Teknofest gibi yarışmalarla taçlanıyor.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>🚀 Projelerim</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="images/kutai.jpg" alt="Kut-AI Projesi">
+        <div class="card-content">
+          <h3>Kut-AI</h3>
+          <p>Oyun tabanlı kişilik ve anksiyete farkındalığı projesi. Unity ve GPT-4o entegrasyonu içerir.</p>
+          <span class="tag">Unity</span>
+          <span class="tag">n8n</span>
+          <span class="tag">MongoDB</span><br>
+          <a href="https://xn--kuta-oza.com/" class="project-link" target="_blank">Projeye Git</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/urbanheat.jpg" alt="Urban Heat Island Projesi">
+        <div class="card-content">
+          <h3>Urban Heat Island AI</h3>
+          <p>ConvLSTM model kullanarak kentsel ısı adası tahmini. Uydu görüntüleri ve NDVI/NDBI analizleri içerir.</p>
+          <span class="tag">Python</span>
+          <span class="tag">Rasterio</span>
+          <span class="tag">CNN-LSTM</span><br>
+          <a href="https://lnkd.in/dKJ8MB6B" class="project-link" target="_blank">Projeye Git</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/atiknakit.jpg" alt="Atık Nakit CV Project">
+        <div class="card-content">
+          <h3>Atık Nakit CV Project</h3>
+          <p>YOLO tabanlı atık nesne tespiti ve veri pipeline otomasyonu.</p>
+          <span class="tag">YOLOv8</span>
+          <span class="tag">Computer Vision</span><br>
+          <a href="https://atiknakit.com" class="project-link" target="_blank">Projeye Git</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>📫 İletişim</h2>
+    <div class="contact">
+      <a href="mailto:gulnihalgur21@gmail.com">E-posta Gönder</a>
+      <a href="https://linkedin.com/in/gulnihalgur" target="_blank">LinkedIn</a>
+      <a href="https://github.com/gulnihalgur" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Gül Nihal Gür | All Rights Reserved
+  </footer>
+
+  <!-- 🧠 SLIDER JAVASCRIPT -->
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    let current = 0;
+
+    function showNextSlide() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 5000); // 5000ms = 5 saniye
+  </script>
+
+</body>
+</html>
